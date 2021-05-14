@@ -1,0 +1,36 @@
+set history save on
+set architecture arm
+monitor reset halt
+target remote:3333
+file hwsec.elf 
+b assignment_rehosting() 
+c
+dump binary memory firmware.bin 0x08000000 0x08040000
+dump memory ram.bin 0x20000000 0x20014000
+
+info registers
+r0             0x13                19
+r1             0x20000380          536871808
+r2             0x40                64
+r3             0x200019cc          536877516
+r4             0x80084bd           134251709
+r5             0x8004de8           134237672
+r6             0x8004e00           134237696
+r7             0x32                50
+r8             0x0                 0
+r9             0x0                 0
+r10            0x0                 0
+r11            0x0                 0
+r12            0x8007889           134248585
+sp             0x200019c8          0x200019c8 <_main_stack+4080>
+lr             0x8004ddb           134237659
+pc             0x8002f56           0x8002f56 <assignment_rehosting()+2>
+xPSR           0x61000000          1627389952
+msp            0x20013fd0          0x20013fd0
+psp            0x200019c8          0x200019c8 <_main_stack+4080>
+primask        0x0                 0
+basepri        0x0                 0
+faultmask      0x0                 0
+control        0x2                 2
+
+quit

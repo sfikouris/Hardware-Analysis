@@ -1,0 +1,1 @@
+Congratz!' 'You' 'are' 'able' 'to' 'decode' 'UART' 'signals!' 'Connect' 'pins' 'as' 'follow' 'for' 'next' 'part' 'COPI(PA_12COMMAPB_15)' 'CIPO(PA_11COMMAPB_14)' 'SCK(PA_5COMMAPB_13)' 'CS(PB_12COMMAPA_6)\r\n
